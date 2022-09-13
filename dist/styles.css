@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --font-size: 2rem;
+}
+
+body,
+html {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: #a1a1aa;
+}
+
+.board-row {
+  display: flex;
+  gap: 0.2rem;
+  color: #a1a1aa;
+}
+
+.board-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--font-size);
+  width: var(--font-size);
+  border: solid;
+  border-radius: 5px;
+}
+
+.ship-tile {
+  background-color: #a1a1aa;
+}
+
+.ship-hover {
+  background-color: #a1a1aa;
+}
+
+.dot {
+  width: calc(var(--font-size) * 0.55);
+  aspect-ratio: 1/1;
+  background-color: #cbd5e1;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit {
+  background-color: red;
+}
+
+.selected > div > * {
+  background: cadetblue;
+  border-color: cadetblue;
+}
+
+.ship-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: calc(var(--font-size) * 10);
+}
+
+.top {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.placement-screen > div:first-child {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.game {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-size);
+}
+
+.game > span {
+  align-self: center;
+  justify-self: center;
+  height: var(--font-size);
+}
+
+button {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 8rem;
+  font-size: 1rem;
+  background-color: cadetblue;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.error {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: red;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.board-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
